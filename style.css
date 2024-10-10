@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+:root{
+    /* --themeColor:rgb(192, 36, 192); */
+    --themeColor:rgb(235, 61, 235);
+}
+/* body{
+    background: linear-gradient(45deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
+
+} */
+.homePage{
+    height: 100vh;
+    width: 100%;
+    padding: 4vh 7vw;
+    background: linear-gradient(45deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
+    /* visibility: hidden; */
+    animation-name: screenDelay;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes screenDelay {
+    100%{
+        visibility: visible;
+    }
+}
+
+/* A section 1 */
+/* main nav bar */
+
+.mainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed;
+    width: 100%; */
+}
+.mainNav h2{
+    color: white;
+     transition: transform 0.3s;
+     font-weight: 700;
+     letter-spacing: 1px;
+
+}
+.mainNav h2:hover{
+    color: var(--themeColor);
+    transform: scale(1.2);
+}
+.mainNav .ul{
+display: flex;
+justify-content: center;
+column-gap: 25px;
+font-weight: bold;
+font-size: 17px;
+}
+.mainNav .ul li{
+    list-style: none;
+}
+/* .mainNav .ul li:nth-child(1) a{
+    color: var(--themeColor);
+    transform: scale(1.2);
+} */
+.mainNav .ul li a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.mainNav .ul li:nth-child(1) a{
+    color: var(--themeColor);
+    transform: scale(1.2);  
+}
+.mainNav .ul li a:hover{
+    color: var(--themeColor);
+    transform: scale(1.2);
+}
+.mainNav .dropdown{
+    display: none;
+}
+
+@media only screen and (max-width:800px){
+ .mainNav h2{
+     font-size: 24px;
+
+}
+.mainNav .ul{
+column-gap: 15px;
+font-weight: bold;
+font-size: 15px;
+}  
+}
+
+@media only screen and (max-width:650px){
+.mainNav .ul{
+column-gap: 13px;
+font-weight: bold;
+font-size: 12px;
+}  
+}
+
+@media only screen and (max-width:550px){
+ .mainNav h2{
+     font-size: 24px;
+}
+.mainNav .ul{
+display: none;
+}
+.mainNav .dropdown{
+    display: block;
+}  
+.mainNav .dropdown img{
+    width: 18px;
+}
+.mainNav .dropdown .btn{
+    height: 26px;
+    width: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainNav .dropdown .btn:hover{
+    background-color: var(--themeColor);
+}
+
+}
+
+/* HomePage section 2 */
+
+.aSection2{
+    width: 100%;
+    height: 55vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20vh;
+}   
+.aSection2 .myIntroContainer{
+    width: 60%;
+    color: white;
+}
+.myIntroContainer h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.myIntroContainer .introLine{
+    font-size: 22px;
+    font-weight: 700;
+}
+.myIntroContainer .buttonAncarConatiner{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.myIntroContainer .buttonAncarConatiner button{
+    padding:5px 10px;
+    /* height: 50px; */
+    border: 2px solid var(--themeColor);
+    background-color: var(--themeColor);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0px 1px 30px 5px var(--themeColor);
+}
+.myIntroContainer .buttonAncarConatiner button:hover{
+    box-shadow: 0px 1px 30px 10px var(--themeColor);
+}
+.aSection2 .myIntroContainer a img{
+    width:30px;
+    margin-left:10px; 
+    transition: transform 0.2s;
+}
+.aSection2 .myIntroContainer a img:hover{
+    border: 2px solid var(--themeColor);
+    border-radius: 50px;
+    transform: scale(1.2);
+}
+.aSection2 .myImageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid  transparent;
+    /* background-color: red; */
+    border-radius: 50%;
+    width: 330px;
+    height: 100%;
+    padding: 4px; 
+    position: relative;
+    overflow: hidden;
+}
+.aSection2 .myImageContainer::before,
+.aSection2 .myImageContainer::after
+{
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background: conic-gradient(transparent,transparent,transparent,var(--themeColor));
+    animation-name: borderMoving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+}
+@keyframes borderMoving {
+    0%{
+        transform: rotate(0deg);
+        /* transform-origin: top; */
+    }
+   /* 25%{
+        transform-origin: right;
+   
+    }
+    50%{
+        transform-origin: bottom;
+    }
+    50%{
+        transform-origin: bottom;
+    } */
+    100%{
+        transform: rotate(360deg);
+        /* transform-origin: top; */
+    }
+}
+.myImageParent{
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 30px;
+    background-color:rgb(12, 12, 12);
+    /* background-color:rgba(7, 1, 36, 0.92); */
+    position: relative;
+    z-index: 1;
+}
+.aSection2 .myImageContainer img{
+height: 100%;
+}
