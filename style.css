@@ -17,7 +17,9 @@
     height: 100vh;
     width: 100%;
     padding: 4vh 7vw;
-    background: linear-gradient(45deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
+    background: linear-gradient(235deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
+    /* background: linear-gradient(235deg,rgb(12, 12, 12),rgba(0, 0, 0, 0.92)); */
+    background-color: black;
     /* visibility: hidden; */
     animation-name: screenDelay;
     animation-duration: 1.5s;
@@ -151,9 +153,54 @@ display: none;
     font-weight: 700;
 }
 .myIntroContainer .introLine{
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
 }
+.myIntroContainer .introLine span{
+    color: transparent;
+    -webkit-text-stroke: 0.7px var(--themeColor);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    position: relative;
+    animation:color linear infinite;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+    display: inline-block;
+}
+@keyframes color {
+    0%{
+      
+    }
+    100%{
+    color: var(--themeColor);
+    }
+}
+.myIntroContainer .introLine span::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    border: 1.5px solid white;
+    animation:colorBharneWala linear infinite;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+    display: inline-block;
+    left: 0px;
+    
+}
+@keyframes colorBharneWala {
+    0%{
+        /* left: 0px; */
+
+    }
+    100%{
+        /* right: 0px; */
+        transform: translateX(265px);
+        
+
+    }
+}
+
 .myIntroContainer .buttonAncarConatiner{
     display: flex;
     justify-content: flex-start;
@@ -203,7 +250,10 @@ display: none;
     position: absolute;
     height: 400px;
     width: 400px;
-    background: conic-gradient(transparent,transparent,transparent,var(--themeColor));
+    background: conic-gradient(transparent 0deg 90deg,
+    var(--themeColor),
+    transparent 180deg 270deg,
+    var(--themeColor));  
     animation-name: borderMoving;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -216,16 +266,6 @@ display: none;
         transform: rotate(0deg);
         /* transform-origin: top; */
     }
-   /* 25%{
-        transform-origin: right;
-   
-    }
-    50%{
-        transform-origin: bottom;
-    }
-    50%{
-        transform-origin: bottom;
-    } */
     100%{
         transform: rotate(360deg);
         /* transform-origin: top; */
@@ -242,7 +282,6 @@ display: none;
     overflow: hidden;
     padding-top: 30px;
     background-color:rgb(12, 12, 12);
-    /* background-color:rgba(7, 1, 36, 0.92); */
     position: relative;
     z-index: 1;
 }
