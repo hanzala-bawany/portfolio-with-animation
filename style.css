@@ -10,7 +10,7 @@
     --themeColor:rgb(235, 61, 235);
 }
 /* body{
-    background: linear-gradient(45deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
+    background: linear-gradient(235deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
 
 } */
 .homePage{
@@ -18,8 +18,6 @@
     width: 100%;
     padding: 4vh 7vw;
     background: linear-gradient(235deg,rgb(12, 12, 12),rgba(7, 1, 36, 0.92));
-    /* background: linear-gradient(235deg,rgb(12, 12, 12),rgba(0, 0, 0, 0.92)); */
-    background-color: black;
     /* visibility: hidden; */
     animation-name: screenDelay;
     animation-duration: 1.5s;
@@ -155,7 +153,12 @@ display: none;
 .myIntroContainer .introLine{
     font-size: 24px;
     font-weight: 700;
+    display: flex;
 }
+
+
+
+
 .myIntroContainer .introLine span{
     color: transparent;
     -webkit-text-stroke: 0.7px var(--themeColor);
@@ -166,6 +169,10 @@ display: none;
     animation-duration: 5s;
     animation-fill-mode: backwards;
     display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
 }
 @keyframes color {
     0%{
@@ -194,13 +201,13 @@ display: none;
 
     }
     100%{
+        left: 100%;
         /* right: 0px; */
-        transform: translateX(265px);
+        /* transform: translateX(265px); */
         
 
     }
 }
-
 .myIntroContainer .buttonAncarConatiner{
     display: flex;
     justify-content: flex-start;
@@ -217,6 +224,10 @@ display: none;
     font-weight: 600;
     box-shadow: 0px 1px 30px 5px var(--themeColor);
 }
+
+
+
+
 .myIntroContainer .buttonAncarConatiner button:hover{
     box-shadow: 0px 1px 30px 10px var(--themeColor);
 }
@@ -225,6 +236,7 @@ display: none;
     margin-left:10px; 
     transition: transform 0.2s;
 }
+
 .aSection2 .myIntroContainer a img:hover{
     border: 2px solid var(--themeColor);
     border-radius: 50px;
@@ -238,7 +250,8 @@ display: none;
     /* background-color: red; */
     border-radius: 50%;
     width: 330px;
-    height: 100%;
+    /* height: 100%; */
+    height: 330px;
     padding: 4px; 
     position: relative;
     overflow: hidden;
@@ -288,3 +301,270 @@ display: none;
 .aSection2 .myImageContainer img{
 height: 100%;
 }
+
+  
+
+
+    @media only screen and (max-width: 1000px) and (max-height:1400px){
+        .aSection2{
+            margin-top:10vh;
+            flex-direction: column;
+            max-height:55vh;
+            align-items: flex-start;
+            /* gap: 35px; */
+            
+
+        }   
+        .aSection2 .myIntroContainer{
+            width: 90%;
+            /* height: 45%; */
+            /* margin-bottom: 15px; */
+        
+        }
+        .aSection2 .myImageContainer{
+            width: 320px;
+            height: 320px;
+        }
+        .myIntroContainer h1{
+            font-size: 35px;
+            font-weight: 700;
+        }
+        .myIntroContainer .introLine{
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+        }
+        .myIntroContainer .introLine span{
+            -webkit-text-stroke: 0.5px var(--themeColor);
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            position: relative;
+            animation:color linear infinite;
+            animation-duration: 5s;
+            animation-fill-mode: backwards;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+        }
+        .myIntroContainer .para{
+            font-size: 18px;
+        }
+        .myIntroContainer .buttonAncarConatiner{
+            gap: 18px;
+        }
+        .myIntroContainer .buttonAncarConatiner button{
+            padding:4px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0px 1px 30px 5px var(--themeColor);
+        }
+        .aSection2 .myIntroContainer a img{
+            width:30px;
+            margin-left:8.5px; 
+            transition: transform 0.2s;
+        }
+        
+        }
+
+
+ @media only screen and (max-width: 800px) and (max-height:1400px){
+        .aSection2{
+            margin-top:15vh;
+            flex-direction: column;
+            min-height:65vh;
+            align-items: flex-start;
+            /* gap: 35px; */
+            
+
+        }   
+    }   
+
+
+
+@media only screen and (max-width: 950px) and (max-height:1000px){
+    .aSection2{
+        margin-top:17vh;
+    }   
+    .aSection2 .myIntroContainer{
+        width: 55%;
+    }
+    .aSection2 .myImageContainer{
+        width: 270px;
+        height: 270px;
+    }
+    .myIntroContainer h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .myIntroContainer .introLine{
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+    }
+    .myIntroContainer .introLine span{
+        -webkit-text-stroke: 0.4px var(--themeColor);
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        position: relative;
+        animation:color linear infinite;
+        animation-duration: 5s;
+        animation-fill-mode: backwards;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+    }
+    .myIntroContainer .para{
+        font-size: 15px;
+    }
+    .myIntroContainer .buttonAncarConatiner{
+        gap: 16px;
+    }
+    .myIntroContainer .buttonAncarConatiner button{
+        padding:3px 7px;
+        font-size: 11px;
+        font-weight: 500;
+        box-shadow: 0px 1px 30px 5px var(--themeColor);
+    }
+    .aSection2 .myIntroContainer a img{
+        width:25px;
+        margin-left:8.5px; 
+        transition: transform 0.2s;
+    }
+    
+    }
+
+/*  media queries at less then 780 px */
+
+    @media only screen and (max-width: 780px) and (max-height:1000px){
+        .aSection2{
+            margin-top:10vh;
+            flex-direction: column;
+            min-height:72vh;
+            align-items: flex-start;
+            /* gap: 35px; */
+            
+
+        }   
+        .aSection2 .myIntroContainer{
+            width: 90%;
+            /* height: 45%; */
+            /* margin-bottom: 15px; */
+        
+        }
+        .aSection2 .myImageContainer{
+            width: 270px;
+            height: 270px;
+        }
+        .myIntroContainer h1{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .myIntroContainer .introLine{
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+        }
+        .myIntroContainer .introLine span{
+            -webkit-text-stroke: 0.4px var(--themeColor);
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            position: relative;
+            animation:color linear infinite;
+            animation-duration: 5s;
+            animation-fill-mode: backwards;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+        }
+        .myIntroContainer .para{
+            font-size: 15px;
+        }
+        .myIntroContainer .buttonAncarConatiner{
+            gap: 16px;
+        }
+        .myIntroContainer .buttonAncarConatiner button{
+            padding:3px 7px;
+            font-size: 11px;
+            font-weight: 500;
+            box-shadow: 0px 1px 30px 5px var(--themeColor);
+        }
+        .aSection2 .myIntroContainer a img{
+            width:25px;
+            margin-left:8.5px; 
+            transition: transform 0.2s;
+        }
+        
+        }
+    
+
+
+
+        @media only screen and (max-width: 780px) and (max-height:800px){
+        .aSection2{
+            margin-top:10vh;
+            flex-direction: column;
+            min-height:78vh;
+            align-items: flex-start;
+            /* gap: 35px; */
+            
+
+        }   
+        .aSection2 .myIntroContainer{
+            width: 95%;
+            /* height: 45%; */
+            /* margin-bottom: 15px; */
+        
+        }
+        .aSection2 .myImageContainer{
+            width: 240px;
+            height: 240px;
+        }
+        .myIntroContainer h1{
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .myIntroContainer .introLine{
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+        }
+        .myIntroContainer .introLine span{
+            -webkit-text-stroke: 0.4px var(--themeColor);
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            position: relative;
+            animation:color linear infinite;
+            animation-duration: 5s;
+            animation-fill-mode: backwards;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+        }
+        .myIntroContainer .para{
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .myIntroContainer .buttonAncarConatiner{
+            gap: 16px;
+        }
+        .myIntroContainer .buttonAncarConatiner button{
+            padding:2.5px 6.5px;
+            font-size: 10px;
+            font-weight: 500;
+            box-shadow: 0px 1px 30px 5px var(--themeColor);
+        }
+        .aSection2 .myIntroContainer a img{
+            width:22px;
+            margin-left:8.5px; 
+            transition: transform 0.2s;
+        }
+        
+        }
