@@ -45,7 +45,7 @@
     color: white;
      transition: transform 0.3s;
      font-weight: 700;
-     letter-spacing: 1px;
+     letter-spacing: 1.2px;
 
 }
 .mainNav h2:hover{
@@ -84,6 +84,11 @@ font-size: 17px;
     display: none;
 }
 
+.mainNav .dropdown li a:hover{
+    color: var(--themeColor);
+    font-weight: 700;
+}
+
 @media only screen and (max-width:800px){
  .mainNav h2{
      font-size: 24px;
@@ -106,7 +111,7 @@ font-size: 12px;
 
 @media only screen and (max-width:550px){
  .mainNav h2{
-     font-size: 24px;
+     font-size: 26px;
 }
 .mainNav .ul{
 display: none;
@@ -461,11 +466,11 @@ height: 100%;
             height: 270px;
         }
         .myIntroContainer h1{
-            font-size: 30px;
+            font-size: 35px;
             font-weight: 600;
         }
         .myIntroContainer .introLine{
-            font-size: 20px;
+            font-size: 23px;
             font-weight: 600;
             display: flex;
         }
@@ -484,19 +489,19 @@ height: 100%;
             margin-left: 5px;
         }
         .myIntroContainer .para{
-            font-size: 15px;
+            font-size: 16px;
         }
         .myIntroContainer .buttonAncarConatiner{
             gap: 16px;
         }
         .myIntroContainer .buttonAncarConatiner button{
-            padding:3px 7px;
-            font-size: 11px;
+            padding:3.5px 7.5px;
+            font-size: 12.5px;
             font-weight: 500;
             box-shadow: 0px 1px 30px 5px var(--themeColor);
         }
         .aSection2 .myIntroContainer a img{
-            width:25px;
+            width:28px;
             margin-left:8.5px; 
             transition: transform 0.2s;
         }
